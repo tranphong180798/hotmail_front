@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="46ed1dd5-c7d0-4e04-a85b-8563074eb2c4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/axios.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/client.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/components/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/components/nuxt-build-indicator.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/components/nuxt-child.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/components/nuxt-error.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/components/nuxt-link.client.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/components/nuxt-link.server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/components/nuxt-loading.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/components/nuxt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/components/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/components/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/empty.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/jsonp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/loading.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/middleware.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/mixins/fetch.client.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/mixins/fetch.server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/nuxt-socket-io.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/router.scrollBehavior.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/routes.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/vetur/tags.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/views/app.template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/views/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/vuetify/options.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nuxt/vuetify/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/product.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/user.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/daiphong.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/logoMomo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/logoVietcombank.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/logomomo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/user/phong.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/DialogConfirm.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Footer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Header.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/LoginComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Logo.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Notification.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/RegisterComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/VuetifyLogo.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/common/DeleteConfirmDialog.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/common/InformationDialog.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/error.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/layout1.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/class.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/account/detail/_mode/_id.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/account/list.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/accountsales/list.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/category/detail/_mode/_id.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/category/list.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/orderbill/detail/_mode/_id.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/orderbill/list.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/user/detail/_mode/_id.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/user/list.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/dashboard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/notfound.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/refreshToken.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/axios.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/bus.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/customRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/importDialogComponents.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/loader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/common/commonConstants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/common/url/screenurl_admin_account.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/common/url/screenurl_admin_category.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/common/url/screenurl_admin_orderbill.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/common/url/screenurl_admin_user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-middleware/header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/v.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/vuetify-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/analytics.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/authenticate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/class.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/user.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/laravel-nuxtjs/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="composer.json" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="20gVsKXUKSv7VqcU35AmcwILR54" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hotmail_front/package.json" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+    <property name="vuejs.nuxt.types-notification-shown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\hotmail\Nuxtjs\pages\adminMaster\dashboard" />
+      <recent name="E:\hotmail\Nuxtjs\components" />
+      <recent name="E:\hotmail\Nuxtjs\layouts" />
+      <recent name="E:\hotmail\Nuxtjs\scripts\common" />
+      <recent name="E:\hotmail\Nuxtjs\plugins" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\hotmail\Nuxtjs\pages\admin" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.Javascript debug">
+    <configuration name="Javascript debug" type="JavascriptDebugType" uri="http://localhost:3000/" useFirstLineBreakpoints="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/../hotmail_front/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Javascript debug" />
+      <item itemvalue="npm.server" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="46ed1dd5-c7d0-4e04-a85b-8563074eb2c4" name="Changes" comment="" />
+      <created>1636466422841</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636466422841</updated>
+      <workItem from="1636466424476" duration="13000" />
+      <workItem from="1636466451370" duration="6989000" />
+      <workItem from="1636506805605" duration="1392000" />
+      <workItem from="1636558869318" duration="2300000" />
+      <workItem from="1636592219688" duration="9738000" />
+      <workItem from="1636682580106" duration="11305000" />
+      <workItem from="1636766173404" duration="28766000" />
+      <workItem from="1636847234202" duration="13455000" />
+      <workItem from="1636872688528" duration="8006000" />
+      <workItem from="1636886096760" duration="12655000" />
+      <workItem from="1636938905620" duration="11266000" />
+      <workItem from="1637029868063" duration="4437000" />
+      <workItem from="1637140373399" duration="15903000" />
+      <workItem from="1637239623180" duration="10773000" />
+      <workItem from="1637313502873" duration="3507000" />
+      <workItem from="1637392021388" duration="5604000" />
+      <workItem from="1637454423851" duration="37276000" />
+      <workItem from="1637581411927" duration="110000" />
+      <workItem from="1637582617009" duration="11180000" />
+      <workItem from="1637630035897" duration="2766000" />
+      <workItem from="1637644130105" duration="613000" />
+      <workItem from="1638113895406" duration="737000" />
+      <workItem from="1638147429488" duration="887000" />
+      <workItem from="1638581216890" duration="13058000" />
+      <workItem from="1638604988343" duration="54000" />
+      <workItem from="1638619389480" duration="105000" />
+      <workItem from="1638619815899" duration="268000" />
+      <workItem from="1638621489225" duration="1176000" />
+      <workItem from="1638629996410" duration="734000" />
+      <workItem from="1638673122134" duration="2893000" />
+      <workItem from="1638753385875" duration="603000" />
+      <workItem from="1640012820874" duration="944000" />
+      <workItem from="1641010391217" duration="388000" />
+      <workItem from="1641024138086" duration="595000" />
+      <workItem from="1641095457753" duration="2291000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/pages/dashboard.vue</url>
+          <line>371</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/pages/dashboard.vue</url>
+          <line>368</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Nuxtjs$Javascript_debug.dat" NAME="Javascript debug Coverage Results" MODIFIED="1638621844940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
