@@ -49,6 +49,7 @@
   </v-card>
 </template>
 <script>
+import axiosUrl from "../../../scripts/common/axios";
 export default {
   name: "index",
   props: ["resource", "title"],

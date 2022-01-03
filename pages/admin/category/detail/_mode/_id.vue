@@ -37,6 +37,7 @@
 
 <script>
 import axios from "axios";
+import axiosUrl from "../../../../../scripts/common/axios";
 import commonConstants from '../../../../../scripts/common/commonConstants';
 import screenUrl from '../../../../../scripts/common/url/screenurl_admin_category'
 export default {
@@ -95,7 +96,7 @@ export default {
       this.$customRouter.push(screenUrl.CATEGORY_LIST, null, this.prev)
     },
     async save(item) {
-      await axios.put("http://localhost:8080/api/category/"+item.id, {
+      await axios.put(axiosUrl.baseUrl+"/category/"+item.id, {
         "name": item.name,
         "image":item.image,
       },{
@@ -115,7 +116,7 @@ export default {
       });
     },
     async newCategory() {
-      await axios.post("http://localhost:8080/api/category/", {
+      await axios.post(axiosUrl.baseUrl+"/category/", {
         "name": this.item.name,
         "image":this.item.image,
       },{

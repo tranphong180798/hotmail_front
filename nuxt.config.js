@@ -87,9 +87,8 @@ export default {
   }
   ,
   axios: {
-    baseURL: "http://localhost:8080/api"  // here set your API url
+    baseURL: 'http://localhost:8080/api'
   },
-
   auth: {
     localStorage: false,
     strategies: {

@@ -90,6 +90,7 @@
 import axios from "axios";
 import commonConstants from '../../../../../scripts/common/commonConstants';
 import screenUrl from '../../../../../scripts/common/url/screenurl_admin_user'
+import axiosUrl from "../../../../../scripts/common/axios";
 export default {
   name: "_id",
   layout : "layout1",
@@ -153,7 +154,7 @@ export default {
     },
     async save(item) {
 
-      await axios.put("http://localhost:8080/api/user/"+item.id, {
+      await axios.put(axiosUrl.baseUrl+"/user/"+item.id, {
         "username": item.username,
         "password": item.password,
         "role" : this.radiosRole,
@@ -175,7 +176,7 @@ export default {
       });
     },
     async newUser() {
-      await axios.post("http://localhost:8080/api/user/", {
+      await axios.post(axiosUrl.baseUrl+"/user/", {
         "username": this.item.username,
         "password": this.item.password,
         "role" : this.radiosRole,

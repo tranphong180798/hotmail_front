@@ -68,6 +68,7 @@
 </template>
 <script>
 import axios from "axios";
+import axiosUrl from "../../../scripts/common/axios";
 import commonConstants from '../../../scripts/common/commonConstants';
 import screenUrl from '../../../scripts/common/url/screenurl_admin_account'
 export default {
@@ -75,7 +76,7 @@ export default {
   props: ["resource", "title"],
   layout: 'layout1',
   asyncData({context, app, route, query, error}) {
-    return axios.get("http://localhost:8080/api/account").then((res) => {
+    return axios.get(axiosUrl.baseUrl+"/account").then((res) => {
       if (res.data.isSuccess) {
         return {listAccount: res.data.data,
         };
@@ -148,7 +149,7 @@ export default {
   methods: {
     // load category
     async loadAccount(){
-      return axios.get("http://localhost:8080/api/account").then((res) => {
+      return axios.get(axiosUrl.baseUrl+"/account").then((res) => {
         if (res.data.isSuccess) {
           this.listAccount = res.data.data;
         } else {
@@ -172,7 +173,7 @@ export default {
       if (!isYes) {
         return;
       }
-      await axios.delete("http://localhost:8080/api/account/"+row.id,{
+      await axios.delete(axiosUrl.baseUrl+"/account/"+row.id,{
         headers : this.header
       }).then(async (res) => {
         console.log(res.data);

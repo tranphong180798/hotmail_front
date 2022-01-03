@@ -68,6 +68,7 @@
 </template>
 <script>
 import axios from "axios";
+import axiosUrl from "../../../scripts/common/axios";
 import commonConstants from '../../../scripts/common/commonConstants';
 import screenUrl from '../../../scripts/common/url/screenurl_admin_category'
 export default {
@@ -75,7 +76,7 @@ export default {
   props: ["resource", "title"],
   layout: 'layout1',
   asyncData({context, app, route, query, error}) {
-    return axios.get("http://localhost:8080/api/category").then((res) => {
+    return axios.get(axiosUrl.baseUrl+"/category").then((res) => {
       if (res.data.isSuccess) {
         return {listCategory: res.data.data,
         };
@@ -148,7 +149,7 @@ export default {
   methods: {
     // load category
     async loadCategory(){
-      return axios.get("http://localhost:8080/api/category").then((res) => {
+      return axios.get(axiosUrl.baseUrl+"/category").then((res) => {
         if (res.data.isSuccess) {
           this.listCategory = res.data.data;
         } else {
@@ -172,7 +173,7 @@ export default {
       if (!isYes) {
         return;
       }
-      await axios.delete("http://localhost:8080/api/category/"+row.id,{
+      await axios.delete(axiosUrl.baseUrl+"/category/"+row.id,{
         headers : this.header
       }).then(async (res) => {
         console.log(res.data);

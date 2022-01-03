@@ -86,6 +86,7 @@
 </template>
 <script>
 import axios from "axios";
+import axiosUrl from "../../../scripts/common/axios";
 import commonConstants from '../../../scripts/common/commonConstants';
 import screenUrl from '../../../scripts/common/url/screenurl_admin_user'
 export default {
@@ -93,7 +94,7 @@ export default {
   props: ["resource", "title"],
   layout: 'layout1',
   asyncData() {
-    return axios.get("http://localhost:8080/api/user",).then((res) => {
+    return axios.get(axiosUrl.baseUrl+"/user",).then((res) => {
       console.log(123456);
       if (res.data.isSuccess) {
         return {listOrderBill: res.data.data,
@@ -173,7 +174,7 @@ export default {
   methods: {
     // load category
     async loadCategory(){
-      return axios.get("http://localhost:8080/api/user").then((res) => {
+      return axios.get(axiosUrl.baseUrl+"/user").then((res) => {
         if (res.data.isSuccess) {
           this.listOrderBill = res.data.data;
         } else {
@@ -196,7 +197,7 @@ export default {
       if (!isYes) {
         return;
       }
-      await axios.delete("http://localhost:8080/api/user/"+row.id,{
+      await axios.delete(axiosUrl.baseUrl+"/user/"+row.id,{
         headers : this.header
       }).then(async (res) => {
         console.log(res.data);

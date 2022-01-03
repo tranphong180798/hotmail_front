@@ -228,10 +228,12 @@
 <script>
 
 import axios from "axios";
+import axiosUrl from "../scripts/common/axios";
 export default {
   name: "dashboard",
   asyncData() {
-    return axios.get("http://localhost:8080/api/category/getListByConditions").then((res) => {
+    console.log(axiosUrl.baseUrl+"/category/getListByConditions");
+    return axios.get(axiosUrl.baseUrl+"/category/getListByConditions").then((res) => {
       if (res.data.status) {
         return {listCategory: res.data.categories};
       } else {

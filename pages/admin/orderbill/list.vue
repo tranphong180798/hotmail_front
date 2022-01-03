@@ -68,6 +68,7 @@
 </template>
 <script>
 import axios from "axios";
+import axiosUrl from "../../../scripts/common/axios";
 import commonConstants from '../../../scripts/common/commonConstants';
 import screenUrl from '../../../scripts/common/url/screenurl_admin_orderbill'
 export default {
@@ -75,7 +76,7 @@ export default {
   props: ["resource", "title"],
   layout: 'layout1',
   asyncData() {
-    return axios.get("http://localhost:8080/api/orderBill",).then((res) => {
+    return axios.get(axiosUrl.baseUrl+"/orderBill",).then((res) => {
       if (res.data.isSuccess) {
         return {listOrderBill: res.data.data,
         };
@@ -154,7 +155,7 @@ export default {
   methods: {
     // load category
     async loadCategory(){
-      return axios.get("http://localhost:8080/api/orderBill").then((res) => {
+      return axios.get(axiosUrl.baseUrl+"/orderBill").then((res) => {
         if (res.data.isSuccess) {
           this.listOrderBill = res.data.data;
         } else {
@@ -177,7 +178,7 @@ export default {
       if (!isYes) {
         return;
       }
-      await axios.delete("http://localhost:8080/api/orderBill/"+row.id,{
+      await axios.delete(axiosUrl.baseUrl+"/orderBill/"+row.id,{
         headers : this.header
       }).then(async (res) => {
         console.log(res.data);

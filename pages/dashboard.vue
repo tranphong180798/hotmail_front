@@ -363,11 +363,11 @@
 <script>
 
 import axios from "axios";
-
+import axiosUrl from "../scripts/common/axios";
 export default {
   name: "dashboard",
   asyncData() {
-    return axios.get("http://localhost:8080/api/category/getListByConditions").then((res) => {
+    return axios.get(axiosUrl.baseUrl+"/category/getListByConditions").then((res) => {
       if (res.data.status) {
         return {listCategory: res.data.categories};
       } else {
@@ -512,7 +512,7 @@ export default {
   methods: {
     transactionUser: async function(){
       let id = this.$store.state.auth.user.id;
-      await axios.get("http://localhost:8080/api/orderBill/"+id, {
+      await axios.get(axiosUrl.baseUrl+"/orderBill/"+id, {
         headers : {
           'Content-Type': 'application/json',
           'Accept': 'application/json,text/plain,*/*',
@@ -542,7 +542,7 @@ export default {
 
     buyOrderBill: async function () {
       const totalMoney = this.amount * this.price;
-      await axios.post("http://localhost:8080/api/orderBill", {
+      await axios.post(axiosUrl.baseUrl+"/orderBill", {
         "user_id": this.$store.state.auth.user.id,
         "quantity": this.amount,
         "totalMoney": totalMoney,
@@ -587,7 +587,7 @@ export default {
       return stringArea;
     },
     downloadFile:async function(type){
-      await axios.post("http://localhost:8080/api/orderBill/createFile", {
+      await axios.post(axiosUrl.baseUrl+"/orderBill/createFile", {
         "username": this.$store.state.auth.user.username,
         "accountSaleString":this.stringArea,
         "typeFile":type
@@ -599,7 +599,7 @@ export default {
         }
       }).then((res) => {
         console.log(res);
-        let url=`http://localhost:8080/api/download?nameFile=${res.data}`;
+        let url=axiosUrl.baseUrl+`/download?nameFile=${res.data}`;
         var element = document.createElement('a');
         element.setAttribute('href', url);
 
@@ -614,7 +614,7 @@ export default {
     },
     pollData: function() {
        setInterval(() => {
-        axios.get("http://localhost:8080/api/category/getListByConditions").then((res) => {
+        axios.get(axiosUrl.baseUrl+"/category/getListByConditions").then((res) => {
           console.log(123);
           if (res.data.status) {
            return this.listCategory = res.data.categories;
@@ -631,7 +631,7 @@ export default {
       this.transaction.type = 'Giao dịch';
       this.transaction.info = 'Danh sách account';
       const user_id = this.$store.state.auth.user.id;
-      await axios.get("http://localhost:8080/api/seeBillOrder?account_id="+user_id+"&orderBill_id="+orderBill_id,{
+      await axios.get(axiosUrl.baseUrl+"/seeBillOrder?account_id="+user_id+"&orderBill_id="+orderBill_id,{
         headers : {
           'Content-Type': 'application/json',
           'Accept': 'application/json,text/plain,*/*',
@@ -653,7 +653,7 @@ export default {
 
     deleteTransaction : async function(orderBill_id){
       this.snackbar = true
-      await axios.delete("http://localhost:8080/api/orderBill/"+orderBill_id,{
+      await axios.delete(axiosUrl.baseUrl+"/orderBill/"+orderBill_id,{
         headers : {
           'Content-Type': 'application/json',
           'Accept': 'application/json,text/plain,*/*',

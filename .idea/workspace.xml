@@ -5,112 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46ed1dd5-c7d0-4e04-a85b-8563074eb2c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/axios.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/client.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/components/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/components/nuxt-build-indicator.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/components/nuxt-child.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/components/nuxt-error.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/components/nuxt-link.client.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/components/nuxt-link.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/components/nuxt-loading.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/components/nuxt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/components/plugin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/components/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/empty.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/jsonp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/loading.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/middleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/mixins/fetch.client.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/mixins/fetch.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/nuxt-socket-io.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/router.scrollBehavior.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/routes.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/vetur/tags.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/views/app.template.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/views/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/vuetify/options.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.nuxt/vuetify/plugin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/product.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/user.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/daiphong.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/logoMomo1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/logoVietcombank.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/logomomo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/user/phong.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/DialogConfirm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Footer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Header.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/LoginComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Logo.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Notification.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/RegisterComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/VuetifyLogo.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/common/DeleteConfirmDialog.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/common/InformationDialog.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/error.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/layout1.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/class.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin/account/detail/_mode/_id.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin/account/list.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin/accountsales/list.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin/category/detail/_mode/_id.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin/category/list.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin/orderbill/detail/_mode/_id.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin/orderbill/list.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin/user/detail/_mode/_id.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin/user/list.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/dashboard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/login.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/notfound.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/refreshToken.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/axios.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/bus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/customRouter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/importDialogComponents.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/loader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/common/commonConstants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/common/url/screenurl_admin_account.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/common/url/screenurl_admin_category.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/common/url/screenurl_admin_orderbill.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/common/url/screenurl_admin_user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-middleware/header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/v.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/vuetify-logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/analytics.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/authenticate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/class.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/product.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/common/axios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/account/list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/account/list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/accountsales/list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/accountsales/list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/category/detail/_mode/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/category/detail/_mode/_id.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/category/list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/category/list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/orderbill/detail/_mode/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/orderbill/detail/_mode/_id.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/orderbill/list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/orderbill/list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/user/detail/_mode/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/user/detail/_mode/_id.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/user/list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/user/list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dashboard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +144,9 @@
       <workItem from="1640012820874" duration="944000" />
       <workItem from="1641010391217" duration="388000" />
       <workItem from="1641024138086" duration="595000" />
-      <workItem from="1641095457753" duration="2291000" />
+      <workItem from="1641095457753" duration="7316000" />
+      <workItem from="1641183102190" duration="1284000" />
+      <workItem from="1641185812336" duration="1665000" />
     </task>
     <servers />
   </component>
