@@ -5,20 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46ed1dd5-c7d0-4e04-a85b-8563074eb2c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/common/axios.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/user/edit.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/user/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/user/register.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schemes/customScheme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-middleware/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/layout1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/layout1.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/admin/account/list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/account/list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/admin/accountsales/list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/accountsales/list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/admin/category/detail/_mode/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/category/detail/_mode/_id.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/admin/category/list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/category/list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/admin/orderbill/detail/_mode/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/orderbill/detail/_mode/_id.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/admin/orderbill/list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/orderbill/list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/admin/user/detail/_mode/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/user/detail/_mode/_id.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/admin/user/list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/user/list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dashboard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/axios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/common/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/common/axios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-middleware/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +154,22 @@
       <workItem from="1641024138086" duration="595000" />
       <workItem from="1641095457753" duration="7316000" />
       <workItem from="1641183102190" duration="1284000" />
-      <workItem from="1641185812336" duration="1665000" />
+      <workItem from="1641185812336" duration="1666000" />
+      <workItem from="1641257959347" duration="127000" />
+      <workItem from="1646813104887" duration="1959000" />
+      <workItem from="1646896808082" duration="7883000" />
+      <workItem from="1646910464569" duration="4970000" />
+      <workItem from="1647045357137" duration="594000" />
+      <workItem from="1647093185609" duration="8241000" />
+      <workItem from="1647142294266" duration="1088000" />
+      <workItem from="1647146042199" duration="9038000" />
+      <workItem from="1647610320663" duration="12980000" />
+      <workItem from="1647754407261" duration="5884000" />
+      <workItem from="1647825651327" duration="17311000" />
+      <workItem from="1647907797274" duration="32356000" />
+      <workItem from="1647960687148" duration="2318000" />
+      <workItem from="1647995935042" duration="25810000" />
+      <workItem from="1648043550523" duration="4383000" />
     </task>
     <servers />
   </component>
@@ -170,12 +193,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/pages/dashboard.vue</url>
-          <line>371</line>
+          <line>374</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/pages/dashboard.vue</url>
-          <line>368</line>
+          <line>371</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>

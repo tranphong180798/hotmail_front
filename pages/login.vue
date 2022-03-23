@@ -1,7 +1,7 @@
 <template>
   <v-container class="grey lighten-5">
     <v-row
-      no-gutters
+        no-gutters
     >
       <v-col md="3">
 
@@ -9,26 +9,28 @@
         <v-row>
           <v-card class="login">
             <v-text-field
-              v-model="login.username"
-              :rules="rules"
-              counter="25"
-              hint="Nhập tên tài khoản"
+                v-model="login.email"
+                :rules="rules"
+                counter="25"
+                hint="Nhập Email"
+                :error-messages="emailError"
             >
               <template v-slot:label>
                 <div class="label-text">
-                  Username
+                  Email
                 </div>
               </template>
             </v-text-field>
             <v-text-field
-              v-model="login.password"
-              :rules="rules"
-              :append-icon="showPass ? 'mdi-eye' : 'mdi-eye-off'"
-              counter="25"
-              hint="Nhập mật khẩu"
-              @click:append="showPass = !showPass"
-              :type="showPass ? 'text' : 'password'"
-              label="password"
+                :error-messages="passwordError"
+                v-model="login.password"
+                :rules="rules"
+                :append-icon="showPass ? 'mdi-eye' : 'mdi-eye-off'"
+                counter="25"
+                hint="Nhập mật khẩu"
+                @click:append="showPass = !showPass"
+                :type="showPass ? 'text' : 'password'"
+                label="password"
             >
               <template v-slot:label>
                 <div class="label-text">
@@ -38,7 +40,7 @@
             </v-text-field>
             <div>
               <v-btn color="primary" @click="userLogin()">Đăng nhập</v-btn>
-              <v-btn color="#FF5722" class="btn btn-register">Đăng kí</v-btn>
+              
             </div>
           </v-card>
         </v-row>
@@ -49,17 +51,17 @@
         <!--    info customer-->
         <v-row style="margin-top:15px;">
           <v-card style="width:88%;">
-            <v-card-title style="justify-content: center;font-weight: bold" >NẠP TIỀN</v-card-title>
+            <v-card-title style="justify-content: center;font-weight: bold">NẠP TIỀN</v-card-title>
             <v-card-text>
               <v-tabs
-                v-model="tab"
-                background-color="white"
-                dark
+                  v-model="tab"
+                  background-color="white"
+                  dark
               >
-                <v-tabs-slider color="black" ></v-tabs-slider>
+                <v-tabs-slider color="black"></v-tabs-slider>
                 <v-tab
-                  v-for="item in items"
-                  :key="item.tab"
+                    v-for="item in items"
+                    :key="item.tab"
                 >
                   <img v-if="item.id===1" src="./../assets/img/logoVietcombank.png" style="width:70px;padding:0"/>
                   <img v-if="item.id===2" src="./../assets/img/logoMomo1.png"
@@ -69,24 +71,24 @@
 
               <v-tabs-items v-model="tab">
                 <v-tab-item
-                  v-for="(item,index) in items"
-                  :key="item.index"
+                    v-for="(item,index) in items"
+                    :key="item.index"
                 >
                   <v-card flat>
                     <v-card-text>
                       <v-text-field
-                        readonly
-                        v-model="item.stk"
+                          readonly
+                          v-model="item.stk"
                       >
                         <template v-slot:label>
                           <div style="font-size: 20px;color:red;margin-bottom: 15px;">
-                            {{item.label}}
+                            {{ item.label }}
                           </div>
                         </template>
                       </v-text-field>
                       <v-text-field
-                        readonly
-                        v-model="item.nameReceive"
+                          readonly
+                          v-model="item.nameReceive"
                       >
                         <template v-slot:label>
                           <div style="font-size: 20px;color:red;margin-bottom: 15px;">
@@ -95,8 +97,8 @@
                         </template>
                       </v-text-field>
                       <v-text-field
-                        readonly
-                        v-model="item.content"
+                          readonly
+                          v-model="item.content"
                       >
                         <template v-slot:label>
                           <div style="font-size: 20px;color:red;margin-bottom: 15px;">
@@ -105,9 +107,9 @@
                         </template>
                       </v-text-field>
                       <v-textarea
-                        label="Phản hồi"
-                        :value="item.feedback"
-                        rows="6"
+                          label="Phản hồi"
+                          :value="item.feedback"
+                          rows="6"
                       >
                         <template v-slot:label>
                           <div style="font-size: 20px;color:#ff0000;margin-bottom: 15px;">
@@ -121,10 +123,10 @@
                                      tile
                                      class="indigo lighten-1 white--text text-center">
                           <v-btn
-                            v-for="icon in icons"
-                            :key="icon"
-                            class="mx-4 white--text"
-                            icon
+                              v-for="icon in icons"
+                              :key="icon"
+                              class="mx-4 white--text"
+                              icon
                           >
                             <v-icon size="24px">
                               {{ icon }}
@@ -158,7 +160,8 @@
               5TR: 125%
               <br/>
               10TR: 200%
-              <p style="font-size:15px;color:red;margin-top:20px">*** Đặc biệt nạp >1TR sẽ được cộng thêm 10% vào tài khoản tại <a href="https://anycaptcha.com/">AnyCapcha</a></p>
+              <p style="font-size:15px;color:red;margin-top:20px">*** Đặc biệt nạp >1TR sẽ được cộng thêm 10% vào tài
+                khoản tại <a href="https://anycaptcha.com/">AnyCapcha</a></p>
             </v-card-text>
           </v-card>
         </v-row>
@@ -168,26 +171,26 @@
 
       <v-col md="9">
         <v-row
-          v-for="(itemCategory,index) in listCategory" :key="index"
+            v-for="(itemCategory,index) in listCategory" :key="index"
         >
           <v-card
-            class="pa-2 rounded distance"
-            outlined
-            tile
-            style="width:100%"
+              class="pa-2 rounded distance"
+              outlined
+              tile
+              style="width:100%"
 
           >
-            <v-card-title class="header_h2">{{ itemCategory.name }}</v-card-title>
+            <v-card-title class="header_h2">{{ index }}</v-card-title>
 
             <v-data-table
-              style="background-color: #dbdee0"
-              table
-              table-hover
-              table-striped
-              table-bordered
-              :headers="headers"
-              :items="itemCategory.categoryType"
-              class="elevation-1 paddingForm my-border"
+                style="background-color: #dbdee0"
+                table
+                table-hover
+                table-striped
+                table-bordered
+                :headers="headers"
+                :items="itemCategory"
+                class="elevation-1 paddingForm my-border"
 
             >
 
@@ -199,29 +202,6 @@
     </v-row>
     <!--    diveder area-->
     <v-divider style="margin-top:25px;"></v-divider>
-    <v-row>
-      <v-card
-        class="pa-2 rounded distance"
-        outlined
-        tile
-        style="width:100%"
-
-      >
-        <v-card-title style="" class="header_h2">GIAO DỊCH CỦA BẠN</v-card-title>
-
-        <v-data-table
-          style="background-color: #dbdee0"
-          table
-          table-hover
-          table-striped
-          table-bordered
-          :headers="headerTransaction"
-          class="elevation-1 paddingForm my-border"
-
-        >
-        </v-data-table>
-      </v-card>
-    </v-row>
   </v-container>
 </template>
 
@@ -229,13 +209,14 @@
 
 import axios from "axios";
 import axiosUrl from "../scripts/common/axios";
+
 export default {
   name: "dashboard",
   asyncData() {
-    console.log(axiosUrl.baseUrl+"/category/getListByConditions");
-    return axios.get(axiosUrl.baseUrl+"/category/getListByConditions").then((res) => {
-      if (res.data.status) {
-        return {listCategory: res.data.categories};
+
+    return axios.get(axiosUrl.baseUrl + "/category/getListByCondition").then((res) => {
+      if (res.data.isSuccess) {
+        return {listCategory: res.data.data};
       } else {
         return {listCategory: []};
       }
@@ -245,15 +226,16 @@ export default {
   },
   data() {
     return {
-      socket:  null,
-      login:{
-        username: '',
+      login: {
+        email: '',
         password: '',
 
       },
+      emailError: '',
+      passwordError: '',
       showPass: false,
-      linkFace:'<a>https://www.facebook.com/daiphong.tran.140/</a>',
-      rules: [v => v.length <= 15 || 'Nhiều nhất là 15 chữ số'],
+      linkFace: '<a>https://www.facebook.com/daiphong.tran.140/</a>',
+      rules: [v => v.length <= 50 || 'Nhiều nhất là 50 chữ số'],
       wordsRules: [v => v.trim().split(' ').length <= 5 || 'Max 5 words'],
       headers: [
         {
@@ -276,39 +258,7 @@ export default {
         },
         {
           text: "Tồn kho",
-          value: "amount",
-          class: "blue lighten-2",
-          align: "center",
-        },
-        {
-          text: "",
-          value: "actions",
-          class: "blue lighten-2",
-          align: "center",
-        }
-      ],
-      headerTransaction:[
-        {
-          text: "Ngày ",
-          value: "date",
-          class: "blue lighten-2",
-          align: "center",
-        },
-        {
-          text: "Mô tả",
-          value: "description",
-          class: "blue lighten-2",
-          align: "center"
-        },
-        {
-          text: "Loại",
-          value: "type",
-          class: "blue lighten-2",
-          align: "center",
-        },
-        {
-          text: "Tiền",
-          value: "price",
+          value: "remain_store",
           class: "blue lighten-2",
           align: "center",
         },
@@ -332,7 +282,7 @@ export default {
           stk: 15983177,
           nameReceive: 'Trần Đỗ Đại Phong',
           content: "Your username",
-          feedback:'Nạp tiền qua VCB, nhập chính xác nội dung là tên tài khoản của bạn,hệ thống sẽ tự động cộng tiền sau 30s-1p (Nếu quá 5 phút tiền chưa vào tài khoản, vui lòng inbox '
+          feedback: 'Nạp tiền qua VCB, nhập chính xác nội dung là tên tài khoản của bạn,hệ thống sẽ tự động cộng tiền sau 30s-1p (Nếu quá 5 phút tiền chưa vào tài khoản, vui lòng inbox '
         },
         {
           id: 2,
@@ -340,7 +290,7 @@ export default {
           stk: '0364720704',
           nameReceive: 'Trần Đỗ Đại Phong',
           content: "Your username",
-          feedback:'Nạp tiền qua MOMO, nhập chính xác nội dung là tên tài khoản của bạn,hệ thống sẽ tự động cộng tiền sau 3-5p (Nếu quá 5 phút tiền chưa vào tài khoản, vui lòng inbox '
+          feedback: 'Nạp tiền qua MOMO, nhập chính xác nội dung là tên tài khoản của bạn,hệ thống sẽ tự động cộng tiền sau 3-5p (Nếu quá 5 phút tiền chưa vào tài khoản, vui lòng inbox '
         }
       ],
 
@@ -349,16 +299,34 @@ export default {
   methods: {
     async userLogin() {
       try {
-        let response = await this.$auth.loginWith('local', { data: this.login })
-
-        this.$router.push({name: 'dashboard'});
-
-      } catch (err) {
-        console.log(err)
+        let response = await this.$auth.loginWith('local', {data: this.login})
+        if (response.data.isSuccess) {
+          this.$router.push({name: 'dashboard'});
+          this.loading();
+        } else {
+          this.passwordError = response.data.errors;
+        }
+      } catch (e) {
+        if (e.response.status === 400) {
+          this.emailError = e.response.data.errors.email;
+          this.passwordError = e.response.data.errors.password;
+        }
       }
-    }
-  },
+    },
 
+    
+
+    async loading() {
+      let loader = this.$loading.show({
+        canCancel: true,
+        onCancel: this.onCancel,
+      });
+      // simulate AJAX
+      setTimeout(() => {
+        loader.hide()
+      }, 2000);
+    }
+  }
 }
 </script>
 
@@ -370,16 +338,19 @@ export default {
 .login {
   padding: 25px;
 }
-.header_h2{
+
+.header_h2 {
   font-size: 25px;
   font-weight: bold;
-  display:flex;
+  display: flex;
   justify-content: center
 }
-.label-text{
+
+.label-text {
   font-size: 20px;
-  color:red;margin-bottom: 15px;
-  font-family:sans-serif;
+  color: red;
+  margin-bottom: 15px;
+  font-family: sans-serif;
   font-weight: bold
 }
 </style>

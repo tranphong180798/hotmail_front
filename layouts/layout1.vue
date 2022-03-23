@@ -55,7 +55,7 @@
 
       <div v-if="$auth.loggedIn">
         <v-btn color="primary">
-          chào {{ $auth.user.name }}
+          chào {{$auth.user.name }}
         </v-btn>
         <v-btn
           color="red "
@@ -69,7 +69,7 @@
       <div v-else>
         <v-btn
           color="primary"
-          to="/login">
+          to="/admin/login">
           <v-icon>
             mdi-login-variant
           </v-icon>
@@ -101,6 +101,9 @@ import {mapGetters} from 'vuex';
 
 export default {
   auth:true,
+  middleware({ $auth, route, redirect }) {
+    
+  },
   data() {
     return {
       clipped: false,

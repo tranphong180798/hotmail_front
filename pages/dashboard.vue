@@ -22,7 +22,7 @@
             <v-card-title style="font-weight: bold;display: flex;justify-content: center">Thông tin User</v-card-title>
             <v-text-field
               readonly
-              v-model="this.$store.state.auth.user.username"
+              v-model="this.$store.state.auth.user.name"
               label="Xin chào"
             >
               <template v-slot:label>
@@ -187,7 +187,7 @@
             style="width:100%"
 
           >
-            <v-card-title class="header_h2">{{ itemCategory.name }}</v-card-title>
+            <v-card-title class="header_h2">{{ index }}</v-card-title>
 
             <v-data-table
               style="background-color: #dbdee0"
@@ -196,7 +196,7 @@
               table-striped
               table-bordered
               :headers="headers"
-              :items="itemCategory.categoryType"
+              :items="itemCategory"
               hide-default-footer
               class="elevation-1 paddingForm my-border"
 
@@ -266,7 +266,10 @@
                 readonly
                 :value="stringArea"
                 row="10"
+                autofocus
+                loading = 'green'
                 style="white-space: pre-line;"
+                success
               >
 
               </v-textarea>
@@ -294,7 +297,7 @@
 
                 color="error"
                 dark
-                @click="dialog3=false"
+                @click="closeDialog()"
               >
                 Đóng lại
               </v-btn>
@@ -306,7 +309,7 @@
     </v-row>
     <!--    diveder area-->
     <v-divider style="margin-top:25px;"></v-divider>
-    <v-row>
+    <v-row >
       <v-card
         class="pa-2 rounded distance"
         outlined
@@ -314,7 +317,7 @@
         style="width:100%"
 
       >
-        <v-card-title style="" class="header_h2">GIAO DỊCH CỦA BẠN</v-card-title>
+        <v-card-title  style="" class="header_h2">GIAO DỊCH CỦA BẠN</v-card-title>
 
         <v-data-table
           style="background-color: #dbdee0"
@@ -324,13 +327,12 @@
           table-bordered
           :headers="headerTransaction"
           :items="listTransactionUser"
-          hide-default-footer
           class="elevation-1 paddingForm my-border"
 
         >
           <template v-slot:item.actions="{ item }">
-            <v-btn color="primary" @click="watchTransaction(item.id)">Xem</v-btn>
-            <v-btn color="primary" @click="deleteTransaction(item.id)">Xóa</v-btn>
+            <v-btn color="#64FFDA" @click="watchTransaction(item.id)">Xem</v-btn>
+            <v-btn color="#E53935" @click="deleteTransaction(item.id)">Xóa</v-btn>
             <!--            <v-btn color="primary" @click="this.dialog=true">Mua</v-btn>-->
 
           </template>
@@ -364,12 +366,13 @@
 
 import axios from "axios";
 import axiosUrl from "../scripts/common/axios";
+import Pusher from 'pusher-js';
 export default {
   name: "dashboard",
-  asyncData() {
-    return axios.get(axiosUrl.baseUrl+"/category/getListByConditions").then((res) => {
-      if (res.data.status) {
-        return {listCategory: res.data.categories};
+  asyncData({$axios}) {
+    return $axios.get(axiosUrl.baseUrl+"/category/getListByCondition").then((res) => {
+      if (res.data.isSuccess) {
+        return {listCategory: res.data.data};
       } else {
         return {listCategory: []};
       }
@@ -377,11 +380,13 @@ export default {
       console.log(error);
     });
   },
+  
   data() {
     return {
       polling: null,
-      username: '',
+      name: '',
       password: '',
+      transactionUsers: this.$store.state.auth.user !== null,
       linkFace: '<a>https://www.facebook.com/daiphong.tran.140/</a>',
       rules: [v => v.length <= 15 || 'Nhiều nhất là 15 chữ số'],
       wordsRules: [v => v.trim().split(' ').length <= 5 || 'Max 5 words'],
@@ -406,7 +411,7 @@ export default {
         },
         {
           text: "Tồn kho",
-          value: "amount",
+          value: "remain_store",
           class: "blue lighten-2",
           align: "center",
         },
@@ -420,19 +425,19 @@ export default {
       headerTransaction: [
         {
           text: "Ngày ",
-          value: "createdAt",
+          value: "created_at",
           class: "blue lighten-2",
           align: "center",
         },
         {
           text: "Mô tả",
-          value: "accountOrdered.name",
+          value: "category_account.name",
           class: "blue lighten-2",
           align: "center"
         },
         {
           text: "Loại",
-          value: "accountOrdered.price",
+          value: "category_account.price",
           class: "blue lighten-2",
           align: "center",
         },
@@ -488,7 +493,7 @@ export default {
       price: null,
       listAccountEmail: [],
       stringArea: '',
-      typeAccountId: null,
+      category_account_id: null,
       typeFile:null,
       alert: {
         type:null,
@@ -509,19 +514,34 @@ export default {
 
 
 },
+  mounted(){
+    Pusher.logToConsole = true;
+
+    const pusher = new Pusher('8ec510681cb424353247', {
+      cluster: 'ap1',
+      encrypted: true,
+      forceTLS: true
+    });
+
+    const channel = pusher.subscribe('account_mail');
+    channel.bind('listen_event_when_data_mail_increase', async(data) => {
+     await axios.get(axiosUrl.baseUrl+"/category/getListByCondition").then((res) => {
+        if (res.data.isSuccess) {
+          this.listCategory = res.data.data;
+        }
+      }).catch((error) => {
+        console.log(error);
+      });
+    });
+  },
   methods: {
     transactionUser: async function(){
       let id = this.$store.state.auth.user.id;
-      await axios.get(axiosUrl.baseUrl+"/orderBill/"+id, {
-        headers : {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json,text/plain,*/*',
-          'Authorization': this.$auth.strategy.token.get(), // refers to nuxt.config.js->auth.token
-        }
-      }).then((res) => {
-        this.listTransactionUser = res.data;
-        console.log(this.listTransactionUser);
-
+      await this.$axios.get(axiosUrl.baseUrl+"/orderBill/"+id).then((res) => {
+            if(res.data.isSuccess) {
+              this.listTransactionUser = res.data.data;
+            }
+        
       }).catch((error) => {
         console.log(error);
       });
@@ -529,30 +549,22 @@ export default {
     ,
     async logout() {
       await this.$auth.logout();
-      await this.$store.dispatch('setButton', {
-        flag: false,
-      })
-      await this.$router.push({name: 'login'});
+      this.loading();
     },
-    buyQuantity: function (price, typeAccountId) {
+    buyQuantity: function (price, category_account_id) {
       this.dialogQuantity = true;
       this.price = price
-      this.typeAccountId = typeAccountId;
+      this.category_account_id = category_account_id;
     },
 
     buyOrderBill: async function () {
+      console.log(this.$auth.strategy.token.get());
       const totalMoney = this.amount * this.price;
-      await axios.post(axiosUrl.baseUrl+"/orderBill", {
+      await this.$axios.post(axiosUrl.baseUrl+"/orderBill", {
         "user_id": this.$store.state.auth.user.id,
-        "quantity": this.amount,
+        "quantity": parseInt(this.amount),
         "totalMoney": totalMoney,
-        "typeAccountId": this.typeAccountId
-      },{
-        headers : {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json,text/plain,*/*',
-          'Authorization': this.$auth.strategy.token.get(), // refers to nuxt.config.js->auth.token
-        }
+        "category_account_id": this.category_account_id
       }).then((res) => {
         console.log(res.data);
         if(res.data.isSuccess) {
@@ -569,7 +581,7 @@ export default {
         }
         else {
           this.alert.type='error';
-          this.alert.message='Bạn không đủ số dư';
+          this.alert.message=res.data.data;
           this.dialogQuantity = false;
         }
         setTimeout(() => {
@@ -587,34 +599,30 @@ export default {
       return stringArea;
     },
     downloadFile:async function(type){
-      await axios.post(axiosUrl.baseUrl+"/orderBill/createFile", {
-        "username": this.$store.state.auth.user.username,
+      await this.$axios.post(axiosUrl.baseUrl+"/accountSale/createFile", {
         "accountSaleString":this.stringArea,
         "typeFile":type
-      },{
-        headers : {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json,text/plain,*/*',
-          'Authorization': this.$auth.strategy.token.get(), // refers to nuxt.config.js->auth.token
+      }).then( async(res) => {
+        if(res.data.isSuccess) {
+
+          let url=axiosUrl.baseUrl+`/accountSale/downloadFile?nameFile=${res.data.data}`;
+          var element = document.createElement('a');
+          element.setAttribute('href', url);
+
+          element.style.display = 'none';
+          document.body.appendChild(element);
+
+          element.click();
+
+          document.body.removeChild(element);
         }
-      }).then((res) => {
-        console.log(res);
-        let url=axiosUrl.baseUrl+`/download?nameFile=${res.data}`;
-        var element = document.createElement('a');
-        element.setAttribute('href', url);
-
-        element.style.display = 'none';
-        document.body.appendChild(element);
-
-        element.click();
-
-        document.body.removeChild(element);
+        
       }).catch((error) => {
       });
     },
     pollData: function() {
        setInterval(() => {
-        axios.get(axiosUrl.baseUrl+"/category/getListByConditions").then((res) => {
+         this.$axios.get(axiosUrl.baseUrl+"/category/getListByConditions").then((res) => {
           console.log(123);
           if (res.data.status) {
            return this.listCategory = res.data.categories;
@@ -630,14 +638,7 @@ export default {
       this.dialog3 = !this.dialog3
       this.transaction.type = 'Giao dịch';
       this.transaction.info = 'Danh sách account';
-      const user_id = this.$store.state.auth.user.id;
-      await axios.get(axiosUrl.baseUrl+"/seeBillOrder?account_id="+user_id+"&orderBill_id="+orderBill_id,{
-        headers : {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json,text/plain,*/*',
-          'Authorization': this.$auth.strategy.token.get(), // refers to nuxt.config.js->auth.token
-        }
-      }).then((res) => {
+      await this.$axios.get(axiosUrl.baseUrl+"/accountSale?order_bill_id="+orderBill_id).then((res) => {
         console.log(res.data);
         if(res.data.isSuccess) {
           this.listAccountEmail = res.data.data;
@@ -653,13 +654,7 @@ export default {
 
     deleteTransaction : async function(orderBill_id){
       this.snackbar = true
-      await axios.delete(axiosUrl.baseUrl+"/orderBill/"+orderBill_id,{
-        headers : {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json,text/plain,*/*',
-          'Authorization': this.$auth.strategy.token.get(), // refers to nuxt.config.js->auth.token
-        }
-      }).then((res) => {
+      await this.$axios.delete(axiosUrl.baseUrl+"/orderBill/"+orderBill_id).then((res) => {
         console.log(res.data);
         if(res.data.isSuccess) {
           this.text = "Xóa thành công";
@@ -674,9 +669,21 @@ export default {
       });
     },
 
+    closeDialog : async function(orderBill_id){
+      this.dialog3=false;
+      this.stringArea ='';
+    },
+    async loading() {
+      let loader = this.$loading.show({
+        canCancel: true,
+        onCancel: this.onCancel,
+      });
+      // simulate AJAX
+      setTimeout(() => {
+        loader.hide()
+      }, 4000);
+    }
   },
-
-
 }
 </script>
 

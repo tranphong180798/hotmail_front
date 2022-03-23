@@ -75,13 +75,21 @@ export default {
   name: "index",
   props: ["resource", "title"],
   layout: 'layout1',
-  asyncData({context, app, route, query, error}) {
-    return axios.get(axiosUrl.baseUrl+"/category").then((res) => {
+  asyncData({$axios,store}) {
+    console.log("store : ",store);
+    return $axios.get(axiosUrl.baseUrl+"/admin/category",{
+          // headers : {
+          //   'Content-Type': 'application/json',
+          //   'Accept': 'application/json,text/plain,*/*',
+          //   'Authorization':'Bearer '+ store.state.token , // refers to nuxt.config.js->auth.token
+          // }
+        }
+        
+    ).then((res) => {
       if (res.data.isSuccess) {
-        return {listCategory: res.data.data,
-        };
-      } else {
-        return {listCategory: []};
+        console.log(res.data.data);
+        return {listCategory: res.data.data};
+      } else {2
       }
     }).catch((error) => {
       console.log(error);
@@ -98,13 +106,13 @@ export default {
         },
         {
           text: "Ngày tạo",
-          value: "createdAt",
+          value: "created_at",
           class: "blue lighten-2",
           align: "center",
         },
         {
           text: "Ngày update",
-          value: "updatedAt",
+          value: "updated_at",
           class: "blue lighten-2",
           align: "center",
         },
